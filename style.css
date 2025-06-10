@@ -1,0 +1,538 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7))
+    ,url(images/school/Main-Gate.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+.logo {
+  height: 200px; /* Increase size here */
+  width: auto;
+}
+
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav image{
+    width: 150px;
+}
+.nav-link{
+    flex: 1;
+    text-align: right;
+}
+.nav-link ul li{
+    list-style: none; 
+    display: inline-block;
+    padding: 4px 8px;
+    position: relative;
+}
+.nav-link ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #002244;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link ul li:hover::after{
+    width: 100%;
+}
+.nav-link ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.text-box h1{
+    font-size: 50px;
+}
+.text-box p{
+    font-size: 18px;
+    color: white;
+    margin: 10px 0 40px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 24px 36px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #002244;
+    background: #002244;
+    transition: 1s;
+
+}
+/* Slideshow Styles */
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind everything */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideAnimation 15s infinite;
+}
+
+.show1 {
+  background-image: url("images/school/Main-Gate.jpg");
+  animation-delay: 0s;
+}
+.show2 {
+  background-image: url("images/school/Class.jpg");
+  animation-delay: 5s;
+}
+.show3 {
+  background-image: url("images/school/IMG_2731.jpg");
+  animation-delay: 10s;
+}
+
+@keyframes slideAnimation {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+/*.........Service We Delivered.....*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Education {
+    padding: 60px 20px;
+    background-color: #f2f6fc;
+    text-align: center;
+}
+
+.Education h1 {
+    font-size: 40px;
+    color: #1a237e;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.Education > p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Education-col {
+    background-color: #ffffff;
+    padding: 25px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.Education-col:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.Education-col h3 {
+    font-size: 22px;
+    color: #1565c0;
+    margin-bottom: 15px;
+}
+
+.Education-col p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .Education-col {
+        width: 100%;
+        max-width: 90%;
+    }
+}
+
+/*..........Department.........*/
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  position: relative;
+  width: 500px; /* adjust size */
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.image-item:hover .overlay {
+  opacity: 1;
+}
+.department4{
+    text-align: center;
+ 
+}
+.department4 h1{
+    font-size: 50px;
+}
+.department4 p{
+    font-size: 25px ;
+}
+/*................Our Facilities..............*/
+
+.facilities {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  
+}
+
+.facilities h1 {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+.facilities p{
+    font-size: 25px;
+}
+
+
+.facility-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.facility-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.facility-item h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.facility-item p {
+  color: #666;
+  font-size: 1rem;
+}
+.facility-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.facility-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.facility-item img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*..................Achment.........*/
+
+.school-stats {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #eef6f9;
+}
+
+.school-stats h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.school-stats p {
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.stat-item {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stat-item h3 {
+  font-size: 2rem;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+/*...............Ex Students........*/
+
+.ex-students-testimonials {
+  background-color: #e9f1f7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.ex-students-testimonials h2 {
+  font-size: 2.5rem;
+  color: #0077cc;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-style: italic;
+  color: #444;
+  position: relative;
+}
+
+.testimonial h4 {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #0077cc;
+  font-style: normal;
+}
+.student-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #0077cc;
+}
+/*.........CTA................*/
+.cta{
+  margin: auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+  url(images/ay-4\ background.jpg);
+  background-position: center;
+  background-color: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+  margin-bottom: 100px;
+}
+.cta h1{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+.cta h1 a{
+  margin-top: 15px;
+}
+
+
+.hero-btn2{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 24px 36px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.hero-btn2:hover{
+    border: 1px solid #002244;
+    background: #002244;
+    transition: 1s;
+
+}
+
+/*.....Footer.....*/
+.site-footer {
+  background-color: #002244;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-container > div {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+}
+.Sub-header{
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7))
+url(images/ay-6\ banner2.jpg);
+background-position: center;
+background-size: cover;
+text-align: center;
+color: white;
+}
+.footer-contact p{
+color: white;
+}
+.footer-about p{
+  color: white;
+}
+.footer-links h4{
+  padding-bottom: 10px;
+}
+
+
